@@ -2,12 +2,9 @@ import java.util.ArrayList;
 
 public class Agenda {
 
-    ArrayList<Contato> contatos;
-    Contato contatoBranco = new Contato("", "");
-    int qtdAgenda = 0;
-
-    public Agenda() {
-    }
+    private Contato contatoVazio = new Contato("", "");
+    private ArrayList<Contato> contatos = new ArrayList<Contato>();
+    private int qtdAgenda = contatos.size();
 
     public ArrayList<Contato> getContatos() {
         return contatos;
@@ -19,10 +16,6 @@ public class Agenda {
 
     public int getQtdAgenda() {
         return qtdAgenda;
-    }
-
-    public void setQtdAgenda(int qtdAgenda) {
-        this.qtdAgenda = qtdAgenda;
     }
 
     public void adiciona(Contato contato) {
@@ -47,7 +40,7 @@ public class Agenda {
                 return contato;
             }
         }
-        return contatoBranco;
+        return contatoVazio;
     }
 
     public Contato buscaTelefone(String telefone) {
@@ -56,7 +49,7 @@ public class Agenda {
                 return contato;
             }
         }
-        return contatoBranco;
+        return contatoVazio;
     }
 
     public Contato buscaEmail(String email) {
@@ -65,10 +58,16 @@ public class Agenda {
                 return contato;
             }
         }
-        return contatoBranco;
+        return contatoVazio;
     }
 
     public ArrayList<Contato> exibe() {
         return contatos;
     }
+
+    @Override
+    public String toString() {
+        return "Agenda [contatos=" + contatos + ", contatoVazio=" + contatoVazio + ", qtdAgenda=" + qtdAgenda + "]";
+    }
+
 }

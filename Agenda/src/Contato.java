@@ -1,21 +1,24 @@
+import java.time.LocalDate;
+
 public class Contato {
+
     private int id;
     private String nome;
     private String telefone;
     private String email;
-    private String dataAniversario;
+    private LocalDate aniversario;
 
     public Contato(String nome, String telefone) {
         this.nome = nome;
         this.telefone = telefone;
     }
 
-    public Contato(int id, String nome, String telefone, String email, String dataAniversario) {
+    public Contato(int id, String nome, String telefone, String email, LocalDate aniversario) {
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
-        this.dataAniversario = dataAniversario;
+        this.aniversario = aniversario;
     }
 
     public int getID() {
@@ -51,12 +54,18 @@ public class Contato {
         this.email = email;
     }
 
-    public String getDataAniversario() {
-        return dataAniversario;
+    public LocalDate getAniversario() {
+        return aniversario;
     }
 
-    public void setDataAniversario(String dataAniversario) {
-        this.dataAniversario = dataAniversario;
+    public void setAniversario(LocalDate aniversario) {
+        this.aniversario = aniversario;
+    }
+
+    @Override
+    public String toString() {
+        return "Contato [id=" + id + ", nome=" + nome + ", telefone=" + telefone + ", email=" + email
+                + ", aniversario=" + aniversario + "]";
     }
 
 }
