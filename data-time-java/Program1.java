@@ -21,8 +21,8 @@ public class Program1 {
         DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate d08 = LocalDate.parse("20/07/2022", fmt1);
         // ou
-        // LocalDate d08 = LocalDate.parse("20/07/2022",
-        // DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        // LocalDate d08 =
+        // LocalDate.parse("20/07/2022",DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 
         DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
         LocalDateTime d09 = LocalDateTime.parse("20/07/2022 01:30", fmt2);
